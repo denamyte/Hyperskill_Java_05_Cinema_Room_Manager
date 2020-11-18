@@ -1,12 +1,12 @@
-package cinema;
+package previous;
 
 import java.util.Arrays;
 
-public class Cinema {
+public class Cinema1 {
 
     private String[][] data;
 
-    public Cinema() {
+    public Cinema1() {
         initialize();
     }
 
@@ -32,6 +32,6 @@ public class Cinema {
     }
 
     public static void main(String[] args) {
-        System.out.print(new Cinema().render());
+        System.out.print(new Cinema1().render());
     }
 }
