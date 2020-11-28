@@ -1,8 +1,8 @@
-package cinema;
+package previous;
 
 import java.util.Scanner;
 
-public class Cinema {
+public class Cinema2 {
 
     static int calculateProfit(int rows, int cols) {
         int totalSeats = rows * cols;
@@ -20,6 +20,6 @@ public class Cinema {
         System.out.println("Enter the number of seats in each row:");
         int cols = scanner.nextInt();
         System.out.println("Total income:");
-        System.out.printf("$%d%n", Cinema.calculateProfit(rows, cols));
+        System.out.printf("$%d%n", Cinema2.calculateProfit(rows, cols));
     }
 }

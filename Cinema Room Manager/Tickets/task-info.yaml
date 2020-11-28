@@ -89,6 +89,8 @@ files:
                 return CheckResult.wrong("Looks like you miscalculated the ticket price. Can't find '$10' in your output.");
             }
 
+            program.stop();
+
             program = new TestedProgram(Cinema.class);
             program.start();
 
@@ -101,6 +103,8 @@ files:
             if (!output.contains("$10")) {
                 return CheckResult.wrong("Looks like you miscalculated the ticket price. Can't find '$10' in your output.");
             }
+
+            program.stop();
 
             program = new TestedProgram(Cinema.class);
             program.start();
@@ -115,6 +119,8 @@ files:
                 return CheckResult.wrong("Looks like you miscalculated the ticket price. Can't find '$8' in your output.");
             }
 
+            program.stop();
+
             program = new TestedProgram(Cinema.class);
             program.start();
 
@@ -127,6 +133,8 @@ files:
             if (!output.contains("$8")) {
                 return CheckResult.wrong("Looks like you miscalculated the ticket price. Can't find '$8' in your output.");
             }
+
+            program.stop();
 
             program = new TestedProgram(Cinema.class);
             program.start();

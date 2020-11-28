@@ -83,12 +83,16 @@ files:
                 return CheckResult.wrong("After showing the seats arrangement you should print the menu again!");
             }
 
+            program.stop();
+
             program = new TestedProgram(Cinema.class);
             program.start();
             program.execute("2\n2");
 
             output = program.execute("1");
             checkSeats(output, 2, 2);
+
+            program.stop();
 
             program = new TestedProgram(Cinema.class);
             program.start();
