@@ -1,9 +1,9 @@
-package cinema;
+package previous;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Cinema {
+public class Cinema3 {
 
     private static final int SMALL_CINEMA_LIMIT = 60;
     private static final int HIGH_PRICE = 10;
@@ -12,7 +12,7 @@ public class Cinema {
     private final int colAmount;
     private String[][] data;
 
-    public Cinema(int rowAmount, int colAmount) {
+    public Cinema3(int rowAmount, int colAmount) {
         this.rowAmount = rowAmount;
         this.colAmount = colAmount;
         initialize();
@@ -60,7 +60,7 @@ public class Cinema {
         int rowAmount = scanner.nextInt();
         System.out.println("Enter the number of seats in each row:");
         int colAmount = scanner.nextInt();
-        Cinema cinema = new Cinema(rowAmount, colAmount);
+        Cinema3 cinema = new Cinema3(rowAmount, colAmount);
 
         System.out.println(cinema.render());
 
