@@ -1,18 +1,18 @@
-package cinema;
+package previous;
 
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
-public class Cinema {
+public class Cinema4 {
 
     static final int SMALL_CINEMA_LIMIT = 60;
     static final int HIGH_PRICE = 10;
     static final int LOW_PRICE = 8;
     static final Map<Integer, MenuOption> OPTION_MAP = new LinkedHashMap<>() {{
-        put(1, new MenuOption(1, "Show the seats", Cinema::renderAction));
-        put(2, new MenuOption(2, "Buy a ticket", Cinema::buyTicketAction));
-        put(0, new MenuOption(0, "Exit", Cinema::quitAction));
+        put(1, new MenuOption(1, "Show the seats", Cinema4::renderAction));
+        put(2, new MenuOption(2, "Buy a ticket", Cinema4::buyTicketAction));
+        put(0, new MenuOption(0, "Exit", Cinema4::quitAction));
     }};
 
     final Scanner scanner = new Scanner(System.in);
@@ -21,7 +21,7 @@ public class Cinema {
     private String[][] data;
     private boolean exit = false;
 
-    public Cinema() {
+    public Cinema4() {
         List<Integer> rowCol = inputData(
                 scanner, "Enter the number of rows:", "Enter the number of seats in each row:");
         this.rowAmount = rowCol.get(0);
@@ -94,9 +94,9 @@ public class Cinema {
     static class MenuOption {
         final int index;
         final String text;
-        final Consumer<Cinema> action;
+        final Consumer<Cinema4> action;
 
-        MenuOption(int index, String text, Consumer<Cinema> action) {
+        MenuOption(int index, String text, Consumer<Cinema4> action) {
             this.index = index;
             this.text = text;
             this.action = action;
@@ -109,6 +109,6 @@ public class Cinema {
     }
 
     public static void main(String[] args) {
-        new Cinema();
+        new Cinema4();
     }
 }
