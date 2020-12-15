@@ -1,19 +1,19 @@
-package cinema;
+package previous;
 
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
-public class Cinema {
+public class Cinema5 {
 
     static final int SMALL_CINEMA_LIMIT = 60;
     static final int HIGH_PRICE = 10;
     static final int LOW_PRICE = 8;
     static final Map<Integer, MenuOption> OPTION_MAP = new LinkedHashMap<>() {{
-        put(1, new MenuOption(1, "Show the seats", Cinema::renderAction));
-        put(2, new MenuOption(2, "Buy a ticket", Cinema::buyTicketAction));
-        put(3, new MenuOption(3, "Statistics", Cinema::statisticsAction));
-        put(0, new MenuOption(0, "Exit", Cinema::quitAction));
+        put(1, new MenuOption(1, "Show the seats", Cinema5::renderAction));
+        put(2, new MenuOption(2, "Buy a ticket", Cinema5::buyTicketAction));
+        put(3, new MenuOption(3, "Statistics", Cinema5::statisticsAction));
+        put(0, new MenuOption(0, "Exit", Cinema5::quitAction));
     }};
 
     final Scanner scanner = new Scanner(System.in);
@@ -27,7 +27,7 @@ public class Cinema {
     private int currentIncome;
     private boolean exit = false;
 
-    public Cinema() {
+    public Cinema5() {
         List<Integer> rowCol = inputData(
                 scanner, "Enter the number of rows:", "Enter the number of seats in each row:");
         this.rowAmount = rowCol.get(0);  // Oh! Where are you, object/array/list/whatever decomposition in Java!?
@@ -136,9 +136,9 @@ public class Cinema {
     static class MenuOption {
         final int index;
         final String text;
-        final Consumer<Cinema> action;
+        final Consumer<Cinema5> action;
 
-        MenuOption(int index, String text, Consumer<Cinema> action) {
+        MenuOption(int index, String text, Consumer<Cinema5> action) {
             this.index = index;
             this.text = text;
             this.action = action;
@@ -151,6 +151,6 @@ public class Cinema {
     }
 
     public static void main(String[] args) {
-        new Cinema();
+        new Cinema5();
     }
 }
